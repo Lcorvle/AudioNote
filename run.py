@@ -1,5 +1,5 @@
 from GUI import *
 
 app = Application()
-app.master.title('Hello World')
+app.master.title('Audio Note')
 app.mainloop()

@@ -1,19 +1,23 @@
 from tkinter import *
+import tkinter.dnd as dnd
 
 
 class Application(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.pack()
+        self.master.geometry('500x300+500+200')
+        self.master.minsize(500, 300)
         self.createWidgets()
 
     def createWidgets(self):
         self.helloLabel = Label(self, text='Hello, world!')
-        self.helloLabel.pack()
+        self.helloLabel.grid()
         self.quitButton = Button(self, text='Quit', command=self.quit)
-        self.quitButton.pack()
+        self.quitButton.grid()
 
 if __name__ == '__main__':
-    app = Application()
-    app.master.title('Hello World')
-    app.mainloop()
+    dnd.test()
+    # app = Application()
+    # app.master.title('Audio Note')
+    # app.mainloop()
